@@ -90,7 +90,18 @@ a { color: inherit; }
 
 /* ---------- key art ---------- */
 .keyart { margin: 56px auto 0; max-width: 430px; }
-.keyart img { border: 3px solid rgba(255,255,255,.9); box-shadow: 0 24px 60px rgba(0,0,0,.6); }
+.keyart__frame { position: relative; overflow: hidden; border: 3px solid rgba(255,255,255,.9); box-shadow: 0 24px 60px rgba(0,0,0,.6); }
+/* diagonal placeholder ribbon: final purpose-designed graphic to come */
+.keyart__tag {
+  position: absolute; left: -15%; right: -15%; top: 50%;
+  transform: translateY(-50%) rotate(-27deg);
+  background: rgba(224, 36, 27, .93); color: #fff;
+  padding: 12px 0; text-align: center;
+  font-family: var(--font-cond); font-weight: 700; font-size: clamp(18px, 4.4vw, 27px);
+  letter-spacing: .42em; text-indent: .42em; text-transform: uppercase;
+  box-shadow: 0 6px 24px rgba(0,0,0,.45);
+  border-top: 2px solid rgba(255,255,255,.85); border-bottom: 2px solid rgba(255,255,255,.85);
+}
 .keyart__caption {
   margin-top: 12px; color: var(--faint);
   font-family: var(--font-cond); font-size: 12px; letter-spacing: .2em; text-transform: uppercase;
