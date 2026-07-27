@@ -25,13 +25,13 @@
     });
   }
 
+  // Anonymous lock screen: no name, no logo, no page title while locked.
+  try { document.title = "Private Preview"; } catch (e) {}
   var gate = document.createElement("div");
   gate.className = "kos-gate";
   gate.innerHTML =
     '<div class="kos-gate__panel">' +
-    '  <svg class="kos-gate__crown" viewBox="0 0 64 40" aria-hidden="true"><path d="M3 37 V15 L17 25 L25 8 L32 19 L39 8 L47 25 L61 15 V37 Z" fill="#fff"/><rect x="3" y="33" width="58" height="4" fill="#fff"/></svg>' +
-    '  <p class="kos-gate__eyebrow">Private preview</p>' +
-    '  <h1 class="kos-gate__title">Machel Montano:<br>The Journey of a Soca King</h1>' +
+    '  <h1 class="kos-gate__eyebrow">Private Preview</h1>' +
     '  <span class="kos-gate__rule"></span>' +
     '  <form class="kos-gate__form">' +
     '    <label class="sr-only" for="kos-gate-pass">Password</label>' +

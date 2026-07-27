@@ -207,8 +207,8 @@ h4 { font-family: var(--font-body); font-weight: 700; font-size: var(--fs-h4); l
 .nav__inner { width: 100%; max-width: var(--container-max); margin-inline: auto; padding-inline: var(--page-inset);
   display: flex; align-items: center; gap: var(--space-6); }
 .nav__brand { display: flex; align-items: center; gap: var(--space-3); }
-.crown { width: 40px; height: 25px; fill: var(--color-text); }
-.crown--sm { width: 34px; height: 21px; }
+.crown { width: 40px; height: auto; }
+.crown--sm { width: 34px; }
 .nav__wordmark { font: 800 11px/1.05 var(--font-body); letter-spacing: 0.14em; color: #fff; }
 .nav__links { display: flex; gap: var(--space-6); margin-left: auto; }
 .nav__links a {
@@ -580,8 +580,8 @@ html.kos-locked body { background: #000; }
 .kos-gate__panel { max-width: 460px; width: 100%; text-align: center; }
 .kos-gate__crown { width: 56px; height: 35px; margin: 0 auto var(--space-6); }
 .kos-gate__eyebrow {
-  font: 700 var(--fs-eyebrow)/1.2 var(--font-body); letter-spacing: var(--ls-eyebrow);
-  text-transform: uppercase; color: var(--color-accent-on-dark); margin-bottom: var(--space-3);
+  font: 700 clamp(17px, 4vw, 22px)/1.2 var(--font-body); letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase; color: #fff; margin: 0;
 }
 .kos-gate__title { font-family: var(--font-display); font-weight: 400; font-size: clamp(1.6rem, 5vw, 2.2rem); line-height: 1.1; text-transform: uppercase; color: #fff; }
 .kos-gate__rule { display: block; width: var(--rule-w); height: var(--rule-h); background: var(--color-accent); border-radius: 2px; margin: var(--space-5) auto; }

@@ -7,7 +7,7 @@
   <meta name="robots" content="noindex" />
   <!-- password gate: lock before first paint unless this browser has been unlocked -->
   <script>try{if(localStorage.getItem('kos-unlock')!=='1')document.documentElement.classList.add('kos-locked');}catch(e){document.documentElement.classList.add('kos-locked');}</script>
-  <script src="js/gate.js?v=2" defer></script>
+  <script src="js/gate.js?v=3" defer></script>
   <!-- decide before first paint whether to show the one-time "Big Truck" intro (no flash for returning visitors) -->
   <script>try{var _s=localStorage.getItem('kos-truck-seen');var _f=/[?&]intro\b/.test(location.search);var _rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;if(_rm||(_s&&!_f))document.documentElement.classList.add('no-intro');}catch(e){}</script>
   <title>Machel Montano: The Journey of a Soca King | Brooklyn Public Library Exhibition</title>
@@ -33,14 +33,13 @@
   <meta name="twitter:image" content="https://kwamenasworld-cloud.github.io/king-of-soca/images/og-image.png" />
 
   <!-- Icons -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 40'%3E%3Crect width='64' height='40' fill='%23000'/%3E%3Cpath d='M3 37 V15 L17 25 L25 8 L32 19 L39 8 L47 25 L61 15 V37 Z' fill='%23fff'/%3E%3Crect x='3' y='33' width='58' height='4' fill='%23fff'/%3E%3C/svg%3E" />
-  <link rel="icon" type="image/png" href="images/favicon.png" />
-  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" href="images/favicon.png?v=2" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png?v=2" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=3" />
+  <link rel="stylesheet" href="css/styles.css?v=4" />
 
   <script type="application/ld+json">
   {
@@ -136,10 +135,7 @@
   <header class="nav" id="nav">
     <div class="nav__inner">
       <a class="nav__brand" href="#top" aria-label="Machel Montano, home">
-        <svg class="crown" viewBox="0 0 64 40" aria-hidden="true">
-          <path d="M3 37 V15 L17 25 L25 8 L32 19 L39 8 L47 25 L61 15 V37 Z" />
-          <rect x="3" y="33" width="58" height="4" />
-        </svg>
+        <img class="crown" src="images/mm-crown-white.png" alt="" width="400" height="207" />
         <span class="nav__wordmark">MACHEL<br>MONTANO</span>
       </a>
 
@@ -723,10 +719,7 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <svg class="crown crown--sm" viewBox="0 0 64 40" aria-hidden="true">
-          <path d="M3 37 V15 L17 25 L25 8 L32 19 L39 8 L47 25 L61 15 V37 Z" />
-          <rect x="3" y="33" width="58" height="4" />
-        </svg>
+        <img class="crown crown--sm" src="images/mm-crown-white.png" alt="" width="400" height="207" />
         <p class="footer__wordmark"><span class="accent" data-edit="footer.wordmark">MACHEL MONTANO</span><span data-edit="footer.wordmarkTail"> · The Journey of a Soca King</span></p>
         <p class="footer__tag muted" data-edit="footer.tag">[placeholder: short exhibition tagline]</p>
       </div>
