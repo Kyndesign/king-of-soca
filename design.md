@@ -1,6 +1,15 @@
 # Machel Montano — "King of Soca" × Brooklyn Public Library
 ## Website Design Specification (design.md)
 
+> ## ⚠️ ACTIVE DIRECTION (2026-07-27): "Like Ah Boss" movie-brand landing page
+> The live site (`index.html`) is now a **coming-soon landing page** styled after the client's *Like Ah Boss: Journey of a Soca King* movie poster and flyer system (source: CK Management PSDs + supplied fonts). The full multi-section site is preserved at `full-site.html` and still follows the system documented below.
+>
+> **Landing-page brand tokens (`css/landing.css`):**
+> - **Fonts (client-supplied, self-hosted in `fonts/`):** `DK Momotaro` (brush display) for torn-paper titles; `Gobold` Bold/Regular (condensed caps, heavy letterspacing) for lockups, labels, buttons; `Gobold High Bold` for tall statement lines. Body copy: Helvetica/Arial stack. *License note: Gobold requires a commercial license (per its Read Me); fonts were supplied by the client from their movie materials.*
+> - **Palette:** unchanged core — black `#000000`, white, brand red `#E0241B` (`#EE4A3F` for small red text on black, AA). Plus torn-paper off-white `#F3EFE6` for title patches only.
+> - **Motifs:** torn-paper patches (irregular `clip-path` + slight rotation, black text on paper), a distressed white page frame (fixed inset border with wobbled clip-path), red diamond bullets, condensed uppercase with wide tracking, red for emphasis values (dates, "coming soon").
+> - **Key art:** `images/poster-joask.jpg` (flattened from the official movie-poster PSD) until the team supplies the final exhibition promo asset.
+
 > Production-ready design system for the exhibition partnership site (Aug 21 – Sep 11, 2026, Central Library + Little Caribbean branches). This document is the single source of truth for the front-end build. All hex values, type sizes, spacing, and component specs below are canonical — use them exactly.
 
 ---

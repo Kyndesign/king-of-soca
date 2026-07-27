@@ -8,28 +8,26 @@
   <!-- password gate: lock before first paint unless this browser has been unlocked -->
   <script>try{if(localStorage.getItem('kos-unlock')!=='1')document.documentElement.classList.add('kos-locked');}catch(e){document.documentElement.classList.add('kos-locked');}</script>
   <script src="js/gate.js?v=2" defer></script>
-  <!-- decide before first paint whether to show the one-time "Big Truck" intro (no flash for returning visitors) -->
-  <script>try{var _s=localStorage.getItem('kos-truck-seen');var _f=/[?&]intro\b/.test(location.search);var _rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;if(_rm||(_s&&!_f))document.documentElement.classList.add('no-intro');}catch(e){}</script>
-  <title>Machel Montano: The Journey of a Soca King | Brooklyn Public Library Exhibition</title>
-  <meta name="description" content="A Brooklyn Public Library exhibition tracing the journey of Machel Montano, the King of Soca, from Trinidad and Tobago to Brooklyn to the world. Aug 21 – Sep 11, 2026." />
+
+  <title>Journey of a Soca King: The Machel Montano Collection | Coming Soon</title>
+  <meta name="description" content="Coming soon: Journey of a Soca King, the first-ever exhibition of the Machel Montano collection. Brooklyn Public Library, Aug 21 – Sep 11, 2026." />
   <meta name="theme-color" content="#000000" />
 
-  <!-- TODO: replace this with the real domain once deployed -->
   <link rel="canonical" href="https://kwamenasworld-cloud.github.io/king-of-soca/" />
 
   <!-- Open Graph / social share -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Brooklyn Public Library" />
-  <meta property="og:title" content="Machel Montano: The Journey of a Soca King" />
-  <meta property="og:description" content="A Brooklyn Public Library exhibition tracing the King of Soca's journey from Trinidad and Tobago to Brooklyn to the world. Aug 21 – Sep 11, 2026." />
+  <meta property="og:title" content="Journey of a Soca King: The Machel Montano Collection" />
+  <meta property="og:description" content="Coming soon: the first-ever exhibition of the Machel Montano collection. Brooklyn Public Library, Aug 21 – Sep 11, 2026." />
   <meta property="og:url" content="https://kwamenasworld-cloud.github.io/king-of-soca/" />
   <meta property="og:image" content="https://kwamenasworld-cloud.github.io/king-of-soca/images/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Machel Montano: The Journey of a Soca King. Brooklyn Public Library Exhibition." />
+  <meta property="og:image:alt" content="Journey of a Soca King: The Machel Montano Collection. Brooklyn Public Library Exhibition." />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Machel Montano: The Journey of a Soca King" />
-  <meta name="twitter:description" content="A Brooklyn Public Library exhibition tracing the King of Soca's journey from Trinidad and Tobago to Brooklyn to the world. Aug 21 – Sep 11, 2026." />
+  <meta name="twitter:title" content="Journey of a Soca King: The Machel Montano Collection" />
+  <meta name="twitter:description" content="Coming soon: the first-ever exhibition of the Machel Montano collection. Brooklyn Public Library, Aug 21 – Sep 11, 2026." />
   <meta name="twitter:image" content="https://kwamenasworld-cloud.github.io/king-of-soca/images/og-image.png" />
 
   <!-- Icons -->
@@ -37,21 +35,18 @@
   <link rel="icon" type="image/png" href="images/favicon.png" />
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=3" />
+  <link rel="stylesheet" href="css/landing.css?v=1" />
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ExhibitionEvent",
-    "name": "Machel Montano: The Journey of a Soca King",
+    "name": "Journey of a Soca King: The Machel Montano Collection",
     "startDate": "2026-08-21",
     "endDate": "2026-09-11",
     "eventStatus": "https://schema.org/EventScheduled",
     "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-    "description": "A Brooklyn Public Library exhibition tracing the journey of Machel Montano, the King of Soca, from Trinidad and Tobago to Brooklyn to the world.",
+    "description": "The first-ever exhibition of the Machel Montano collection: forty years of soca, from Trinidad and Tobago to Brooklyn to the world.",
     "image": "https://kwamenasworld-cloud.github.io/king-of-soca/images/og-image.png",
     "location": {
       "@type": "Place",
@@ -71,690 +66,107 @@
   </script>
 </head>
 <body>
-  <a class="skip-link" href="#top">Skip to content</a>
+  <div class="frame" aria-hidden="true"></div>
 
-  <!-- First-load carnival "Big Truck" intro (plays once per visitor; ?intro to replay) -->
-  <div class="intro" aria-hidden="true">
-    <div class="intro__curtain"></div>
-    <div class="intro__confetti">
-      <span style="left:6%;background:#E0241B;animation-duration:2.6s;animation-delay:0s"></span>
-      <span style="left:14%;background:#fff;animation-duration:2.2s;animation-delay:.25s"></span>
-      <span style="left:23%;background:#E0241B;animation-duration:2.9s;animation-delay:.1s"></span>
-      <span style="left:34%;background:#fff;animation-duration:2.4s;animation-delay:.4s"></span>
-      <span style="left:45%;background:#E0241B;animation-duration:2.7s;animation-delay:.15s"></span>
-      <span style="left:56%;background:#fff;animation-duration:2.5s;animation-delay:.3s"></span>
-      <span style="left:66%;background:#E0241B;animation-duration:3s;animation-delay:.05s"></span>
-      <span style="left:76%;background:#fff;animation-duration:2.3s;animation-delay:.35s"></span>
-      <span style="left:86%;background:#E0241B;animation-duration:2.8s;animation-delay:.2s"></span>
-      <span style="left:93%;background:#fff;animation-duration:2.6s;animation-delay:.45s"></span>
-    </div>
-
-    <svg class="intro__truck" viewBox="0 0 620 300" role="img" aria-label="A carnival big truck drives across the screen">
-      <g class="truck-bob">
-        <g class="truck-speed" stroke="#E0241B" stroke-width="3" stroke-linecap="round" opacity=".5">
-          <line x1="6" y1="118" x2="48" y2="118"/><line x1="0" y1="150" x2="42" y2="150"/><line x1="10" y1="182" x2="46" y2="182"/>
-        </g>
-        <line x1="0" y1="244" x2="620" y2="244" stroke="#1a1a1a" stroke-width="3"/>
-        <rect x="55" y="158" width="375" height="46" rx="4" fill="#141414" stroke="#2a2a2a" stroke-width="2"/>
-        <rect x="66" y="50" width="350" height="110" rx="6" fill="#0e0e0e" stroke="#2a2a2a" stroke-width="2"/>
-        <g>
-          <circle cx="116" cy="84" r="22" fill="#1c1c1c" stroke="#333" stroke-width="2"/><circle cx="116" cy="84" r="12" fill="#E0241B"/><circle cx="116" cy="84" r="4" fill="#fff"/>
-          <circle cx="196" cy="84" r="22" fill="#1c1c1c" stroke="#333" stroke-width="2"/><circle cx="196" cy="84" r="12" fill="#E0241B"/><circle cx="196" cy="84" r="4" fill="#fff"/>
-          <circle cx="276" cy="84" r="22" fill="#1c1c1c" stroke="#333" stroke-width="2"/><circle cx="276" cy="84" r="12" fill="#E0241B"/><circle cx="276" cy="84" r="4" fill="#fff"/>
-          <circle cx="356" cy="84" r="22" fill="#1c1c1c" stroke="#333" stroke-width="2"/><circle cx="356" cy="84" r="12" fill="#E0241B"/><circle cx="356" cy="84" r="4" fill="#fff"/>
-          <circle cx="116" cy="130" r="22" fill="#1c1c1c" stroke="#333" stroke-width="2"/><circle cx="116" cy="130" r="12" fill="#E0241B"/><circle cx="116" cy="130" r="4" fill="#fff"/>
-          <circle cx="196" cy="130" r="22" fill="#1c1c1c" stroke="#333" stroke-width="2"/><circle cx="196" cy="130" r="12" fill="#E0241B"/><circle cx="196" cy="130" r="4" fill="#fff"/>
-          <circle cx="276" cy="130" r="22" fill="#1c1c1c" stroke="#333" stroke-width="2"/><circle cx="276" cy="130" r="12" fill="#E0241B"/><circle cx="276" cy="130" r="4" fill="#fff"/>
-          <circle cx="356" cy="130" r="22" fill="#1c1c1c" stroke="#333" stroke-width="2"/><circle cx="356" cy="130" r="12" fill="#E0241B"/><circle cx="356" cy="130" r="4" fill="#fff"/>
-        </g>
-        <rect x="70" y="168" width="190" height="26" rx="3" fill="#E0241B"/>
-        <text x="165" y="187" text-anchor="middle" class="truck-label">BIG TRUCK</text>
-        <rect x="416" y="172" width="42" height="32" fill="#c81f17"/>
-        <path d="M452 204 L452 120 L470 120 L487 84 L544 84 L556 120 L566 120 L566 204 Z" fill="#E0241B"/>
-        <path d="M493 116 L502 92 L540 92 L549 116 Z" fill="#0E0E0E" stroke="#333"/>
-        <rect x="497" y="120" width="48" height="28" rx="2" fill="#0E0E0E"/>
-        <circle cx="563" cy="158" r="6" fill="#ffd27a"/>
-        <rect x="562" y="178" width="9" height="26" fill="#2a2a2a"/>
-        <g class="truck-wheel"><circle cx="150" cy="210" r="32" fill="#0d0d0d" stroke="#2a2a2a" stroke-width="3"/><circle cx="150" cy="210" r="15" fill="#1a1a1a" stroke="#444" stroke-width="2"/><circle cx="150" cy="210" r="6" fill="#E0241B"/></g>
-        <g class="truck-wheel"><circle cx="322" cy="210" r="32" fill="#0d0d0d" stroke="#2a2a2a" stroke-width="3"/><circle cx="322" cy="210" r="15" fill="#1a1a1a" stroke="#444" stroke-width="2"/><circle cx="322" cy="210" r="6" fill="#E0241B"/></g>
-        <g class="truck-wheel"><circle cx="512" cy="210" r="32" fill="#0d0d0d" stroke="#2a2a2a" stroke-width="3"/><circle cx="512" cy="210" r="15" fill="#1a1a1a" stroke="#444" stroke-width="2"/><circle cx="512" cy="210" r="6" fill="#E0241B"/></g>
-        <g class="truck-sound">
-          <circle class="sw" cx="240" cy="105" r="20"/>
-          <circle class="sw sw-2" cx="240" cy="105" r="20"/>
-          <circle class="sw sw-3" cx="240" cy="105" r="20"/>
-        </g>
-      </g>
-    </svg>
-
-    <span class="intro__skip">click anywhere to skip</span>
-  </div>
-
-  <!-- ============ SCROLL PROGRESS ============ -->
-  <div class="scroll-progress" aria-hidden="true"><span class="scroll-progress__bar"></span></div>
-
-  <!-- ============ HEADER / NAV ============ -->
-  <header class="nav" id="nav">
-    <div class="nav__inner">
-      <a class="nav__brand" href="#top" aria-label="Machel Montano, home">
-        <svg class="crown" viewBox="0 0 64 40" aria-hidden="true">
-          <path d="M3 37 V15 L17 25 L25 8 L32 19 L39 8 L47 25 L61 15 V37 Z" />
-          <rect x="3" y="33" width="58" height="4" />
-        </svg>
-        <span class="nav__wordmark">MACHEL<br>MONTANO</span>
-      </a>
-
-      <nav class="nav__links" aria-label="Primary">
-        <a href="#journey" data-edit="nav.journey">The Journey</a>
-        <a href="#exhibition" data-edit="nav.exhibition">The Exhibition</a>
-        <a href="#visit" data-edit="nav.visit">Visit</a>
-        <a href="#programs" data-edit="nav.programs">Programs</a>
-      </nav>
-
-      <a href="#visit" class="btn btn--primary nav__cta" data-edit="nav.cta">Plan Your Visit</a>
-
-      <button type="button" class="nav__burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- Mobile menu -->
-  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Site menu" hidden>
-    <nav aria-label="Mobile">
-      <a href="#journey"><span class="eyebrow">01</span><span data-edit="nav.journey">The Journey</span></a>
-      <a href="#exhibition"><span class="eyebrow">02</span><span data-edit="nav.exhibition">The Exhibition</span></a>
-      <a href="#visit"><span class="eyebrow">03</span><span data-edit="nav.visit">Visit</span></a>
-      <a href="#programs"><span class="eyebrow">04</span><span data-edit="nav.programs">Programs</span></a>
-    </nav>
-    <a href="#visit" class="btn btn--primary" data-edit="nav.cta">Plan Your Visit</a>
-  </div>
-
-  <main id="top" tabindex="-1">
+  <main class="page">
 
     <!-- ============ HERO ============ -->
-    <section class="hero" id="hero">
-      <div class="hero__wedge hero__wedge--tl" aria-hidden="true"></div>
-      <div class="hero__wedge hero__wedge--br" aria-hidden="true"></div>
+    <header class="hero">
+      <p class="lockup" aria-label="Machel Montano">
+        <span data-edit="landing.lockupL">Machel</span>
+        <svg class="crown" viewBox="0 0 64 40" aria-hidden="true"><path d="M3 37 V15 L17 25 L25 8 L32 19 L39 8 L47 25 L61 15 V37 Z"/><rect x="3" y="33" width="58" height="4"/></svg>
+        <span data-edit="landing.lockupR">Montano</span>
+      </p>
 
-      <svg class="hero__route" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-        <path class="route-line" d="M-50 720 C 300 760, 460 540, 720 470 S 1180 300, 1500 150" />
-        <circle class="route-node" cx="180" cy="708" r="6" />
-        <circle class="route-node" cx="720" cy="470" r="8" />
-        <circle class="route-node" cx="1320" cy="208" r="6" />
-      </svg>
-
-      <div class="hero__inner">
-        <p class="eyebrow hero__eyebrow" data-reveal data-edit="hero.eyebrow">Brooklyn Public Library · Exhibition</p>
-        <h1 class="hero__title" data-reveal>
-          <span class="line" data-edit="hero.titleL1">The Journey</span>
-          <span class="line"><span data-edit="hero.titleL2">Of A </span><span class="accent" data-edit="hero.titleAccent">Soca King</span></span>
-        </h1>
-        <span class="rule rule--red" data-reveal></span>
-        <p class="hero__lede body-lg muted" data-reveal data-edit="hero.lede">From Trinidad &amp; Tobago, through Brooklyn, to the world: the story of the artist who transformed soca into a global movement.</p>
-
-        <div class="hero__meta" data-reveal>
-          <span class="pill" data-edit="hero.dates">Aug 21 – Sep 11, 2026</span>
-          <span class="hero__loc" data-edit="hero.location">Central Library · Little Caribbean Branches · Brooklyn, NYC</span>
-        </div>
-
-        <div class="hero__cta" data-reveal>
-          <a href="#visit" class="btn btn--primary" data-edit="hero.ctaPrimary">Plan Your Visit</a>
-          <a href="#journey" class="btn btn--ghost" data-edit="hero.ctaSecondary">Follow the Journey →</a>
-        </div>
-
-        <div class="hero__shores" data-reveal aria-hidden="true">
-          <span class="shore"><i></i>Trinidad &amp; Tobago</span>
-          <span class="shore-link"></span>
-          <span class="shore"><i></i>Brooklyn</span>
-          <span class="shore-link"></span>
-          <span class="shore"><i></i>The World</span>
-        </div>
+      <div class="patch" role="presentation">
+        <h1 class="title" data-edit="landing.title">Journey of<br>a Soca King</h1>
       </div>
+      <p class="subtitle" data-edit="landing.subtitle">The Machel Montano Collection</p>
 
-      <a href="#journey" class="hero__scroll" aria-label="Scroll to begin">
-        <span>Scroll</span>
-        <span class="hero__scroll-line"></span>
-      </a>
+      <p class="coming" data-edit="landing.coming">Coming Soon</p>
+      <p class="meta" data-edit="landing.meta">Brooklyn Public Library · Central Library, Grand Army Plaza</p>
+      <p class="meta meta--dates" data-edit="landing.dates">Aug 21 – Sep 11, 2026 · Free and open to the public</p>
+    </header>
+
+    <!-- ============ KEY GRAPHIC ============ -->
+    <figure class="keyart">
+      <img src="images/poster-joask.jpg" alt="Journey of a Soca King poster: a young Machel Montano in a white suit performing with a microphone" width="1600" height="2133" />
+      <figcaption class="keyart__caption" data-edit="landing.keyartCaption">From “Like Ah Boss: Journey of a Soca King,” in theatres now</figcaption>
+    </figure>
+
+    <!-- ============ STATEMENT ============ -->
+    <section class="statement">
+      <h2 class="statement__lead" data-edit="landing.statementLead">The first-ever exhibition of the Machel Montano collection.</h2>
+      <p class="statement__body" data-edit="landing.statementBody">Forty years of soca, shown for the very first time. Photographs, costumes, awards and memories, carefully preserved by Elizabeth Montano, tell the journey of the King of Soca: born in Trinidad and Tobago, carried through Brooklyn, and shared with the world. Presented in partnership with the Brooklyn Public Library at Central Library and across the Little Caribbean branches.</p>
     </section>
 
-    <!-- ============ MARQUEE ============ -->
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee__track">
-        <span>Trinidad &amp; Tobago <em>·</em> Brooklyn <em>·</em> The World <em>·</em> 44 Years <em>·</em> King of Soca <em>·</em></span>
-        <span>Trinidad &amp; Tobago <em>·</em> Brooklyn <em>·</em> The World <em>·</em> 44 Years <em>·</em> King of Soca <em>·</em></span>
-      </div>
-    </div>
-
-    <!-- ============ THE JOURNEY / THE BRIDGE ============ -->
-    <section class="section journey" id="journey">
-      <div class="container">
-        <header class="section-header section-header--center" data-reveal>
-          <p class="eyebrow" data-edit="journey.eyebrow">Why Brooklyn?: The Concept</p>
-          <h2 class="section-header__title"><span data-edit="journey.titleLead">One Bridge. </span><span class="accent" data-edit="journey.titleAccent">Three Shores.</span></h2>
-          <span class="rule rule--red"></span>
-          <p class="section-header__lede body-lg muted" data-edit="journey.lede">Brooklyn became the bridge between an island sound and a global audience. It's the place where Machel Montano's journey crossed from Trinidad &amp; Tobago into the world.</p>
-        </header>
-      </div>
-
-      <!-- THE BRIDGE -->
-      <div class="bridge" data-reveal>
-        <div class="container">
-          <div class="bridge__wrap">
-            <div class="bridge__stage">
-              <svg class="bridge__svg" viewBox="0 60 1280 340" preserveAspectRatio="xMidYMid meet" role="img" aria-label="An illustration of the Brooklyn Bridge spanning from a house in Trinidad and Tobago to a globe representing the world, with a marker that travels across it.">
-                <!-- roadway deck (the marker rides deckPath) -->
-                <path id="deckPath" class="bridge__deck" d="M48 372 H1232" />
-                <path class="bridge__deck bridge__deck--low" d="M48 380 H1232" />
-
-                <!-- main suspension cable: anchors into the deck, drapes over both towers -->
-                <path class="bridge__cable" d="M88 372 C230 250 340 120 440 80" />
-                <path class="bridge__cable" d="M440 80 C545 235 735 235 840 80" />
-                <path class="bridge__cable" d="M840 80 C940 120 1050 250 1192 372" />
-
-                <!-- vertical suspenders (cable -> deck) -->
-                <g class="bridge__suspenders">
-                  <line x1="150" y1="317" x2="150" y2="372"/>
-                  <line x1="214" y1="258" x2="214" y2="372"/>
-                  <line x1="278" y1="195" x2="278" y2="372"/>
-                  <line x1="342" y1="141" x2="342" y2="372"/>
-                  <line x1="406" y1="97"  x2="406" y2="372"/>
-                  <line x1="470" y1="117" x2="470" y2="372"/>
-                  <line x1="534" y1="167" x2="534" y2="372"/>
-                  <line x1="598" y1="192" x2="598" y2="372"/>
-                  <line x1="662" y1="195" x2="662" y2="372"/>
-                  <line x1="726" y1="178" x2="726" y2="372"/>
-                  <line x1="790" y1="135" x2="790" y2="372"/>
-                  <line x1="918" y1="125" x2="918" y2="372"/>
-                  <line x1="982" y1="180" x2="982" y2="372"/>
-                  <line x1="1046" y1="237" x2="1046" y2="372"/>
-                  <line x1="1110" y1="299" x2="1110" y2="372"/>
-                </g>
-
-                <!-- ORIGIN: house (Trinidad) -->
-                <g class="bridge__node bridge__node--trinidad">
-                  <path class="house-roof" d="M50 328 L88 300 L126 328 Z" />
-                  <rect class="house-body" x="60" y="326" width="56" height="46" />
-                  <rect class="house-door" x="80" y="348" width="16" height="24" />
-                  <rect class="house-win" x="100" y="334" width="9" height="9" />
-                </g>
-
-                <!-- THE SPAN: Brooklyn Bridge twin gothic towers -->
-                <g class="bridge__node bridge__node--brooklyn">
-                  <rect class="tower" x="414" y="80" width="52" height="292" />
-                  <path class="tower-arch" d="M420 372 L420 318 Q420 300 426 294 Q432 300 432 318 L432 372 Z" />
-                  <path class="tower-arch" d="M448 372 L448 318 Q448 300 454 294 Q460 300 460 318 L460 372 Z" />
-                  <rect class="tower" x="814" y="80" width="52" height="292" />
-                  <path class="tower-arch" d="M820 372 L820 318 Q820 300 826 294 Q832 300 832 318 L832 372 Z" />
-                  <path class="tower-arch" d="M848 372 L848 318 Q848 300 854 294 Q860 300 860 318 L860 372 Z" />
-                </g>
-
-                <!-- THE FAR SHORE: globe (the world) -->
-                <g class="bridge__node bridge__node--world">
-                  <circle class="globe" cx="1192" cy="342" r="30" />
-                  <ellipse class="globe-line" cx="1192" cy="342" rx="13" ry="30" />
-                  <line class="globe-line" x1="1162" y1="342" x2="1222" y2="342"/>
-                  <path class="globe-line" d="M1166 326 q26 11 52 0" />
-                  <path class="globe-line" d="M1166 358 q26 -11 52 0" />
-                </g>
-
-                <!-- traveling marker -->
-                <g class="bridge__trail bridge__trail--1" transform="translate(88 372)"><circle r="7" /></g>
-                <g class="bridge__trail bridge__trail--2" transform="translate(88 372)"><circle r="5" /></g>
-                <g class="bridge__traveler" transform="translate(88 372)">
-                  <circle class="traveler-pulse" r="16" />
-                  <circle class="traveler-dot" r="9" />
-                </g>
-              </svg>
-            </div>
-
-            <div class="bridge__controls" role="group" aria-label="Travel the bridge: Trinidad and Tobago to Brooklyn to the world">
-              <button type="button" class="waypoint is-active" data-station="0" data-act="act-trinidad" aria-pressed="true" aria-label="Travel to Trinidad and Tobago, the origin. Go to Act I.">
-                <span class="waypoint__index">01</span>
-                <span class="waypoint__eyebrow" data-edit="bridge.wp1Eyebrow">Origin</span>
-                <span class="waypoint__name" data-edit="bridge.wp1Name">Trinidad &amp; Tobago</span>
-              </button>
-              <button type="button" class="waypoint" data-station="1" data-act="act-brooklyn" aria-pressed="false" aria-label="Travel to Brooklyn, the span. Go to Act II.">
-                <span class="waypoint__index">02</span>
-                <span class="waypoint__eyebrow" data-edit="bridge.wp2Eyebrow">The Span</span>
-                <span class="waypoint__name" data-edit="bridge.wp2Name">Brooklyn</span>
-              </button>
-              <button type="button" class="waypoint" data-station="2" data-act="act-world" aria-pressed="false" aria-label="Travel to the world, the far shore. Go to Act III.">
-                <span class="waypoint__index">03</span>
-                <span class="waypoint__eyebrow" data-edit="bridge.wp3Eyebrow">The Far Shore</span>
-                <span class="waypoint__name" data-edit="bridge.wp3Name">The World</span>
-              </button>
-            </div>
-            <p class="sr-only" aria-live="polite" data-bridge-status></p>
-          </div>
-        </div>
-      </div>
+    <!-- ============ HIGHLIGHTS ============ -->
+    <section class="block">
+      <h2 class="block__title" data-edit="landing.hlTitle">Inside the Exhibition</h2>
+      <ul class="highlights">
+        <li data-edit="landing.hl1"><strong>The Archive.</strong> Four decades of photographs, costumes and awards, first time on display.</li>
+        <li data-edit="landing.hl2"><strong>Encore Vinyl Station.</strong> A dedicated listening station for the new album.</li>
+        <li data-edit="landing.hl3"><strong>The Lyric Book.</strong> A five-volume, hand-bound book of Machel's lyrics, 1982–2026.</li>
+        <li data-edit="landing.hl4"><strong>In Print.</strong> A wall of local newspapers and foreign magazines from before social media.</li>
+        <li data-edit="landing.hl5"><strong>Interactive Media.</strong> Live performances and rare footage on screens throughout.</li>
+        <li data-edit="landing.hl6"><strong>Little Caribbean.</strong> Free family programming across Flatbush, Crown Heights, Clarendon, Rugby and Brower Park.</li>
+      </ul>
     </section>
 
-    <!-- ============ WHY BROOKLYN ============ -->
-    <section class="section section--light why" id="why-brooklyn">
-      <div class="container why__grid">
-        <div class="why__copy">
-          <header class="section-header" data-reveal>
-            <p class="eyebrow" data-edit="why.eyebrow">Why Brooklyn?</p>
-            <h2 class="section-header__title"><span data-edit="why.titleLead">The Engine Of A </span><span class="accent" data-edit="why.titleAccent">Global Career</span></h2>
-            <span class="rule rule--red"></span>
-            <p class="section-header__lede body-lg" data-reveal data-edit="why.lede">Brooklyn is home to the largest Caribbean community outside the West Indies, and the launchpad that carried soca from Trinidad and Tobago to the world.</p>
-          </header>
-          <ul class="key-list" data-reveal>
-            <li><span class="key-list__head" data-edit="why.r1Head">The largest diaspora</span><span class="muted" data-edit="why.r1Body">Home to the largest Caribbean community outside the West Indies.</span></li>
-            <li><span class="key-list__head" data-edit="why.r2Head">The launchpad</span><span class="muted" data-edit="why.r2Body">The borough that became the engine of soca's growth and Machel's international career.</span></li>
-            <li><span class="key-list__head" data-edit="why.r3Head">Roots &amp; family</span><span class="muted" data-edit="why.r3Body">A city Machel briefly called home; three of his children live there today.</span></li>
-          </ul>
-        </div>
-        <div class="why__media" data-reveal>
-          <div class="why__imgwrap"><img src="images/brooklyn.png" alt="Brooklyn skyline and bridge (placeholder image)" loading="lazy" width="800" height="600" /></div>
-        </div>
-      </div>
+    <!-- ============ PROGRAMMING DATES ============ -->
+    <section class="block">
+      <h2 class="block__title" data-edit="landing.progTitle">Programming</h2>
+      <p class="block__note" data-edit="landing.progNote">Preliminary. Dates and programming subject to change.</p>
+      <ul class="schedule">
+        <li><span class="schedule__date" data-edit="landing.ev1Date">Aug 21</span><span class="schedule__what" data-edit="landing.ev1What">Exhibition launch, Central Library</span></li>
+        <li><span class="schedule__date" data-edit="landing.ev2Date">Aug 21 – Sep 11</span><span class="schedule__what" data-edit="landing.ev2What">Open to the public, free</span></li>
+        <li><span class="schedule__date" data-edit="landing.ev3Date">Sep 3</span><span class="schedule__what" data-edit="landing.ev3What">“Like Ah Boss” screening and DJ party, outdoor plaza (rain date Sep 4)</span></li>
+        <li><span class="schedule__date" data-edit="landing.ev4Date">Sep 10</span><span class="schedule__what" data-edit="landing.ev4What">Closing ceremony</span></li>
+      </ul>
     </section>
 
-    <!-- ============ ACT I — TRINIDAD ============ -->
-    <section class="section act act--dark" id="act-trinidad" data-rail-anchor="trinidad">
-      <span class="ghost-numeral" aria-hidden="true" data-parallax>01</span>
-      <div class="container act__grid">
-        <div class="act__copy">
-          <header class="section-header" data-reveal>
-            <p class="eyebrow" data-edit="actI.eyebrow">Act I · Since 1982</p>
-            <h2 class="section-header__title"><span data-edit="actI.titleLead">Born In </span><span class="accent" data-edit="actI.titleAccent">Trinidad &amp; Tobago</span></h2>
-            <span class="rule rule--red"></span>
-          </header>
-          <p class="body-lg muted" data-reveal data-edit="actI.body">A seven-year-old boy from the birthplace of soca discovers a gift that would carry the sound of Trinidad &amp; Tobago across the world.</p>
-          <ul class="key-list" data-reveal>
-            <li><span class="key-list__head" data-edit="actI.k1Head">The Gift</span><span class="muted" data-edit="actI.k1Body">The remarkable talent that first captured a nation's attention.</span></li>
-            <li><span class="key-list__head" data-edit="actI.k2Head">Carnival Roots</span><span class="muted" data-edit="actI.k2Body">Raised by Carnival, inspired by culture, destined for the stage.</span></li>
-            <li><span class="key-list__head" data-edit="actI.k3Head">The Sound of Soca</span><span class="muted" data-edit="actI.k3Body">The music, rhythm and spirit that shaped a global ambassador.</span></li>
-          </ul>
-        </div>
-        <div class="act__media" data-reveal>
-          <div class="media media--portrait media--redblock">
-            <span class="media__tag" data-edit="actI.mediaTag">Archive image: [placeholder]</span>
-          </div>
-        </div>
-      </div>
+    <!-- ============ MACHEL SPEAKING / RSVP ============ -->
+    <section class="block">
+      <h2 class="block__title" data-edit="landing.liveTitle">Machel Live</h2>
+      <p class="block__body" data-edit="landing.liveBody">Appearances and talks will be announced here, along with RSVP and ticket links when doors open.</p>
+      <p class="tba" data-edit="landing.liveTba">To be announced</p>
     </section>
 
-    <!-- ============ ACT II — BROOKLYN ============ -->
-    <section class="section act section--light" id="act-brooklyn" data-rail-anchor="brooklyn">
-      <span class="ghost-numeral ghost-numeral--light" aria-hidden="true" data-parallax>02</span>
-      <div class="container">
-        <header class="section-header" data-reveal>
-          <p class="eyebrow" data-edit="actII.eyebrow">Act II · The Engine</p>
-          <h2 class="section-header__title"><span data-edit="actII.titleLead">Brooklyn Builds </span><span class="accent" data-edit="actII.titleAccent">The Boss</span></h2>
-          <span class="rule rule--red"></span>
-          <p class="section-header__lede body-lg" data-reveal data-edit="actII.lede">Brooklyn became more than a destination. It became the bridge that connected Caribbean culture to the world.</p>
-        </header>
+    <!-- ============ MAILING LIST ============ -->
+    <section class="block block--signup" id="signup">
+      <h2 class="block__title" data-edit="landing.signupTitle">Be the first to know</h2>
+      <p class="block__body" data-edit="landing.signupBody">Join the mailing list for opening dates, programming and appearances.</p>
 
-        <h3 class="subhead" data-reveal data-edit="actII.subhead">Roots In Brooklyn</h3>
-        <!-- Roots timeline -->
-        <ol class="timeline" aria-label="Machel's roots in Brooklyn">
-          <li class="timeline__item" data-reveal>
-            <span class="timeline__year accent" data-edit="actII.t1Year">1984</span>
-            <div class="timeline__body"><h4 data-edit="actII.t1Title">Caribbean scholarship in Brooklyn</h4><p class="muted" data-edit="actII.t1Body">Selected for choreographer Marie Brooks' summer program; debuted at Madison Square Garden at age nine.</p></div>
-          </li>
-          <li class="timeline__item" data-reveal>
-            <span class="timeline__year accent" data-edit="actII.t2Year">1986</span>
-            <div class="timeline__body"><h4 data-edit="actII.t2Title">“Calypso for Africa,” recorded at 11</h4><p class="muted" data-edit="actII.t2Body">Joined an all-star cast for Trinidad and Tobago's answer to “We Are The World,” cut in Trinidad and Brooklyn.</p></div>
-          </li>
-          <li class="timeline__item" data-reveal>
-            <span class="timeline__year accent" data-edit="actII.t3Year">1997</span>
-            <div class="timeline__body"><h4 data-edit="actII.t3Title">First Road March, written in Brooklyn</h4><p class="muted" data-edit="actII.t3Body">“Big Truck,” written in Brooklyn, was an early signpost of the future King of Soca.</p></div>
-          </li>
-          <li class="timeline__item" data-reveal>
-            <span class="timeline__year accent" data-edit="actII.t4Year">2007</span>
-            <div class="timeline__body"><h4 data-edit="actII.t4Title">Sells out Madison Square Garden</h4><p class="muted" data-edit="actII.t4Body">Headlined and sold out the Garden, including back-to-back shows.</p></div>
-          </li>
-          <li class="timeline__item" data-reveal>
-            <span class="timeline__year accent" data-edit="actII.t5Year">2012</span>
-            <div class="timeline__body"><h4 data-edit="actII.t5Title">Marshal of the Labor Day Parade</h4><p class="muted" data-edit="actII.t5Body">Led the Eastern Parkway parade alongside Harry Belafonte.</p></div>
-          </li>
-          <li class="timeline__item" data-reveal>
-            <span class="timeline__year accent" data-edit="actII.t6Year">2015</span>
-            <div class="timeline__body"><h4 data-edit="actII.t6Title">Top billing at Hot 97</h4><p class="muted" data-edit="actII.t6Body">First soca artist to headline the Labor Day concert, prompting a rename to “On Da Reggae and Soca Tip.”</p></div>
-          </li>
-          <li class="timeline__item" data-reveal>
-            <span class="timeline__year accent" data-edit="actII.t7Year">2016</span>
-            <div class="timeline__body"><h4 data-edit="actII.t7Title">Bazodee premieres in Manhattan</h4><p class="muted" data-edit="actII.t7Body">First Caribbean artist to star in a feature film, dubbed by Billboard “soca's Purple Rain.”</p></div>
-          </li>
-          <li class="timeline__item" data-reveal>
-            <span class="timeline__year accent" data-edit="actII.t8Year">2023</span>
-            <div class="timeline__body"><h4 data-edit="actII.t8Title">Lifetime Achievement Award</h4><p class="muted" data-edit="actII.t8Body">Honoured at the inaugural Caribbean Music Awards at Brooklyn's Kings Theatre.</p></div>
-          </li>
-          <li class="timeline__item" data-reveal>
-            <span class="timeline__year accent" data-edit="actII.t9Year">2024</span>
-            <div class="timeline__body"><h4 data-edit="actII.t9Title">Keys to the City &amp; the Apollo</h4><p class="muted" data-edit="actII.t9Body">Presented the keys to New York City by Mayor Adams; four sold-out nights at the Apollo Theater.</p></div>
-          </li>
-          <li class="timeline__item" data-reveal>
-            <span class="timeline__year accent" data-edit="actII.t10Year">2025</span>
-            <div class="timeline__body"><h4 data-edit="actII.t10Title">Barclays Center, sold out again</h4><p class="muted" data-edit="actII.t10Body">Marquee act at the inaugural Planet Brooklyn Festival.</p></div>
-          </li>
-          <li class="timeline__item" data-reveal>
-            <span class="timeline__year accent" data-edit="actII.t11Year">Dec 2025</span>
-            <div class="timeline__body"><h4 data-edit="actII.t11Title">Person of the Year</h4><p class="muted" data-edit="actII.t11Body">Named by Brooklyn's Everybody's Magazine, a longstanding voice of Caribbean culture.</p></div>
-          </li>
-          <li class="timeline__item" data-reveal>
-            <span class="timeline__year accent" data-edit="actII.t12Year">2026</span>
-            <div class="timeline__body"><h4 data-edit="actII.t12Title">Times Square to Brooklyn Public Library</h4><p class="muted" data-edit="actII.t12Body">Forty years after his first Brooklyn performance, Machel returned to New York with “Encore”, illuminating Times Square and Central Park before bringing his story to the Brooklyn Public Library.</p></div>
-          </li>
-        </ol>
-
-        <aside class="callout" data-reveal data-edit="actII.callout">From Madison Square Garden to Barclays Center, Machel Montano turned New York's biggest stages into celebrations of Caribbean culture. No other soca artist has filled New York's most iconic venues quite like Machel Montano.</aside>
-      </div>
+      <!-- Mailchimp embed: replace MC_ACTION_URL with the form action from Mailchimp
+           (Audience -> Signup forms -> Embedded forms), e.g.
+           https://XXXX.usX.list-manage.com/subscribe/post?u=...&id=... -->
+      <form class="signup" method="post" action="MC_ACTION_URL" target="_blank" novalidate>
+        <label class="sr-only" for="mce-EMAIL">Email address</label>
+        <input id="mce-EMAIL" name="EMAIL" type="email" required placeholder="Your email address" autocomplete="email" />
+        <div class="signup__hp" aria-hidden="true"><input type="text" name="b_placeholder" tabindex="-1" value="" /></div>
+        <button type="submit" data-edit="landing.signupBtn">Sign Up</button>
+      </form>
+      <p class="signup__msg" role="status" hidden></p>
     </section>
 
-    <!-- ============ ACT III — THE WORLD ============ -->
-    <section class="section act act--dark act--world" id="act-world" data-rail-anchor="world">
-      <span class="ghost-numeral" aria-hidden="true" data-parallax>03</span>
-      <div class="container">
-        <header class="section-header section-header--center" data-reveal>
-          <p class="eyebrow" data-edit="actIII.eyebrow">Act III · Global</p>
-          <h2 class="section-header__title"><span data-edit="actIII.titleLead">The World </span><span class="accent" data-edit="actIII.titleAccent">Opens</span></h2>
-          <span class="rule rule--red"></span>
-          <p class="section-header__lede body-lg muted" data-reveal data-edit="actIII.lede">[placeholder: from Brooklyn, the reach goes global]</p>
-        </header>
-
-        <div class="stats" data-reveal>
-          <div class="stat">
-            <span class="stat__rule"></span>
-            <span class="stat__figure" data-count="44" data-suffix="">44</span>
-            <span class="stat__label" data-edit="actIII.stat1Label">Years On The Road</span>
-          </div>
-          <div class="stat">
-            <span class="stat__rule"></span>
-            <span class="stat__figure" data-count="1.4" data-suffix="MM+" data-decimals="1">1.4MM+</span>
-            <span class="stat__label" data-edit="actIII.stat2Label">Audience Per Year</span>
-          </div>
-          <div class="stat">
-            <span class="stat__rule"></span>
-            <span class="stat__figure" data-count="12" data-suffix="×">12×</span>
-            <span class="stat__label" data-edit="actIII.stat3Label">Road March Titles</span>
-          </div>
-          <div class="stat">
-            <span class="stat__rule"></span>
-            <span class="stat__figure" data-count="45" data-suffix="">45</span>
-            <span class="stat__label" data-edit="actIII.stat4Label">Albums</span>
-          </div>
-        </div>
-        <p class="caption muted center" data-reveal data-edit="actIII.caption">[placeholder: note on figures / sources]</p>
-      </div>
-    </section>
-
-    <!-- ============ THE EXHIBITION ============ -->
-    <section class="section section--light exhibition" id="exhibition">
-      <div class="container">
-        <header class="section-header" data-reveal>
-          <p class="eyebrow" data-edit="exhibition.eyebrow">The Exhibition</p>
-          <h2 class="section-header__title"><span data-edit="exhibition.titleLead">The Journey, </span><span class="accent" data-edit="exhibition.titleAccent">On Display</span></h2>
-          <span class="rule rule--red"></span>
-          <p class="section-header__lede body-lg" data-reveal data-edit="exhibition.lede">More than forty years of photographs, costumes, awards and memories, all carefully preserved by Elizabeth Montano and now shared with the world for the very first time.</p>
-        </header>
-
-        <h3 class="subhead" data-reveal data-edit="exhibition.subhead">Four Eras, One Story</h3>
-        <div class="cards cards--4">
-          <article class="era-card" data-reveal>
-            <span class="era-card__num">01</span>
-            <h4 data-edit="exhibition.era1Title">The Early Years</h4>
-            <p class="muted" data-edit="exhibition.era1Body">The making of a young phenomenon.</p>
-          </article>
-          <article class="era-card" data-reveal>
-            <span class="era-card__num">02</span>
-            <h4 data-edit="exhibition.era2Title">The Rise</h4>
-            <p class="muted" data-edit="exhibition.era2Body">From local star to Caribbean icon.</p>
-          </article>
-          <article class="era-card" data-reveal>
-            <span class="era-card__num">03</span>
-            <h4 data-edit="exhibition.era3Title">The Global Years</h4>
-            <p class="muted" data-edit="exhibition.era3Body">Taking soca beyond the islands.</p>
-          </article>
-          <article class="era-card" data-reveal>
-            <span class="era-card__num">04</span>
-            <h4 data-edit="exhibition.era4Title">The Legacy</h4>
-            <p class="muted" data-edit="exhibition.era4Body">Still building bridges for the next generation.</p>
-          </article>
-        </div>
-
-        <h3 class="subhead" data-reveal data-edit="exhibition.artifactsSubhead">Key Artifacts</h3>
-        <div class="cards cards--artifacts">
-          <article class="artifact-card" data-reveal>
-            <div class="artifact-card__media"><img src="images/artifact-vinyl.png" alt="Encore Vinyl Station (placeholder image)" loading="lazy" width="800" height="600" /></div>
-            <div class="artifact-card__body">
-              <h4 data-edit="exhibition.art1Title">Encore Vinyl Station</h4>
-              <p class="muted" data-edit="exhibition.art1Body">A dedicated listening station for the new album.</p>
-            </div>
-          </article>
-          <article class="artifact-card" data-reveal>
-            <div class="artifact-card__media"><img src="images/artifact-lyricbook.png" alt="Lyric Book (placeholder image)" loading="lazy" width="800" height="600" /></div>
-            <div class="artifact-card__body">
-              <h4 data-edit="exhibition.art2Title">Lyric Book</h4>
-              <p class="muted" data-edit="exhibition.art2Body">A 5-volume, hand-bound book of Machel's lyrics (1982–2026), featuring a custom font based on his handwriting.</p>
-            </div>
-          </article>
-          <article class="artifact-card" data-reveal>
-            <div class="artifact-card__media"><img src="images/artifact-archive.png" alt="Historical Archive (placeholder image)" loading="lazy" width="800" height="600" /></div>
-            <div class="artifact-card__body">
-              <h4 data-edit="exhibition.art3Title">Historical Archive</h4>
-              <p class="muted" data-edit="exhibition.art3Body">A wall display of local newspapers and foreign magazines.</p>
-            </div>
-          </article>
-          <article class="artifact-card" data-reveal>
-            <div class="artifact-card__media"><img src="images/artifact-media.png" alt="Interactive Media (placeholder image)" loading="lazy" width="800" height="600" /></div>
-            <div class="artifact-card__body">
-              <h4 data-edit="exhibition.art4Title">Interactive Media</h4>
-              <p class="muted" data-edit="exhibition.art4Body">iPads and projectors showing live performances and other content.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ BEFORE SOCIAL MEDIA ============ -->
-    <section class="section act--dark before" id="before-social">
-      <span class="ghost-numeral" aria-hidden="true" data-parallax>’82</span>
-      <div class="container">
-        <header class="section-header" data-reveal>
-          <p class="eyebrow" data-edit="before.eyebrow">Before Social Media</p>
-          <h2 class="section-header__title"><span data-edit="before.titleLead">Decades Before </span><span class="accent" data-edit="before.titleAccent">The Feed</span></h2>
-          <span class="rule rule--red"></span>
-          <p class="section-header__lede body-lg muted" data-reveal data-edit="before.lede">Long before hashtags and viral clips, Machel's rise was captured on tape and in print: television appearances, early performances, local newspapers and foreign magazines.</p>
-        </header>
-
-        <h3 class="subhead" data-reveal data-edit="before.videosSubhead">Archive Footage</h3>
-        <div class="cards cards--3">
-          <article class="media-card" data-reveal>
-            <div class="media-card__thumb"><img src="images/video-1.png" alt="Early performance footage (placeholder)" loading="lazy" width="800" height="600" /></div>
-            <div class="media-card__body"><h4 data-edit="before.v1Title">Early Performance</h4><p class="muted" data-edit="before.v1Note">[placeholder: clip details]</p></div>
-          </article>
-          <article class="media-card" data-reveal>
-            <div class="media-card__thumb"><img src="images/video-2.png" alt="Television appearance (placeholder)" loading="lazy" width="800" height="600" /></div>
-            <div class="media-card__body"><h4 data-edit="before.v2Title">Television Appearance</h4><p class="muted" data-edit="before.v2Note">[placeholder: clip details]</p></div>
-          </article>
-          <article class="media-card" data-reveal>
-            <div class="media-card__thumb"><img src="images/video-3.png" alt="Road March footage (placeholder)" loading="lazy" width="800" height="600" /></div>
-            <div class="media-card__body"><h4 data-edit="before.v3Title">Road March</h4><p class="muted" data-edit="before.v3Note">[placeholder: clip details]</p></div>
-          </article>
-        </div>
-
-        <h3 class="subhead" data-reveal data-edit="before.pressSubhead">In Print</h3>
-        <div class="cards cards--3">
-          <article class="media-card" data-reveal>
-            <div class="media-card__thumb media-card__thumb--scan"><img src="images/press-1984-cej-cover.jpg" alt="Caribbean Entertainment Journal cover, August 1984: a young Machel Montano performing, with the cover line Junior Calypso Monarch" loading="lazy" width="1000" height="1400" /></div>
-            <div class="media-card__body"><h4 data-edit="before.a1Title">Caribbean Entertainment Journal</h4><p class="muted" data-edit="before.a1Note">August 1984 (Vol. 2, No. 3). Cover: “Junior Calypso Monarch.”</p></div>
-          </article>
-          <article class="media-card" data-reveal>
-            <div class="media-card__thumb media-card__thumb--scan"><img src="images/press-2007-amsterdam.jpg" alt="New York Amsterdam News page, September 2007: an exclusive interview with soca star Machel Montano" loading="lazy" width="1000" height="776" /></div>
-            <div class="media-card__body"><h4 data-edit="before.a2Title">New York Amsterdam News</h4><p class="muted" data-edit="before.a2Note">September 20–26, 2007. “An exclusive interview with soca star Machel Montano,” by MISANI; photography Hakim Mutlag.</p></div>
-          </article>
-          <article class="media-card" data-reveal>
-            <div class="media-card__thumb media-card__thumb--scan"><img src="images/press-2007-fader.jpg" alt="The Fader magazine spread, 2007: the cover story Delirious on Machel Montano" loading="lazy" width="1000" height="615" /></div>
-            <div class="media-card__body"><h4 data-edit="before.a3Title">The Fader, Issue 43</h4><p class="muted" data-edit="before.a3Note">Jan/Feb 2007 cover story “Delirious,” by Nick Barat; photography Andrew Dosunmu.</p></div>
-          </article>
-        </div>
-
-        <p class="caption muted center" data-reveal data-edit="before.note">Selections from the Montano press archive, 1984–2011. Reproduction permissions in progress; more pieces to come.</p>
-      </div>
-    </section>
-
-    <!-- ============ VISIT ============ -->
-    <section class="section visit" id="visit">
-      <span class="ghost-numeral" aria-hidden="true" data-parallax>04</span>
-      <div class="container">
-        <header class="section-header" data-reveal>
-          <p class="eyebrow" data-edit="visit.eyebrow">Plan Your Visit</p>
-          <h2 class="section-header__title"><span data-edit="visit.titleLead">Across </span><span class="accent" data-edit="visit.titleAccent">Brooklyn</span></h2>
-          <span class="rule rule--red"></span>
-        </header>
-
-        <div class="visit__lead" data-reveal>
-          <div class="visit__fact"><span class="eyebrow accent" data-edit="visit.fact1Label">Dates</span><p data-edit="visit.fact1Value">Aug 21 – Sep 11, 2026</p></div>
-          <div class="visit__fact"><span class="eyebrow accent" data-edit="visit.fact2Label">Anchor</span><p data-edit="visit.fact2Value">Brooklyn Public Library · Central Library</p></div>
-          <div class="visit__fact"><span class="eyebrow accent" data-edit="visit.fact3Label">Admission</span><p data-edit="visit.fact3Value">Free and open to the public</p></div>
-        </div>
-
-        <h3 class="subhead" data-reveal data-edit="visit.eventsSubhead">Dates &amp; Events</h3>
-        <p class="caption muted schedule__note" data-reveal data-edit="visit.eventsNote">Preliminary. Dates and programming subject to change.</p>
-        <ol class="schedule" data-reveal>
-          <li class="schedule__item">
-            <span class="schedule__date" data-edit="visit.ev1Date">Aug 21</span>
-            <div class="schedule__body"><h4 data-edit="visit.ev1Title">Exhibition Launch &amp; First Viewing</h4><p class="muted" data-edit="visit.ev1Note">Central Library, Grand Army Plaza</p></div>
-          </li>
-          <li class="schedule__item">
-            <span class="schedule__date" data-edit="visit.ev2Date">Aug 21 – Sep 11</span>
-            <div class="schedule__body"><h4 data-edit="visit.ev2Title">Open to the Public · Free</h4><p class="muted" data-edit="visit.ev2Note">Central Library + Little Caribbean branches</p></div>
-          </li>
-          <li class="schedule__item">
-            <span class="schedule__date" data-edit="visit.ev3Date">Sep 3</span>
-            <div class="schedule__body"><h4 data-edit="visit.ev3Title">Documentary Screening: Like Ah Boss</h4><p class="muted" data-edit="visit.ev3Note">Outdoor plaza, Central Library · followed by a DJ party · rain date Sep 4</p></div>
-          </li>
-          <li class="schedule__item">
-            <span class="schedule__date" data-edit="visit.ev4Date">Sep 10</span>
-            <div class="schedule__body"><h4 data-edit="visit.ev4Title">Closing Ceremony</h4><p class="muted" data-edit="visit.ev4Note">Central Library</p></div>
-          </li>
-        </ol>
-        <p class="muted schedule__tba" data-reveal data-edit="visit.eventsTba">More Little Caribbean branch events to be announced, including readings and steelpan.</p>
-
-        <h3 class="subhead" data-reveal data-edit="visit.subhead">Little Caribbean Branches</h3>
-        <div class="cards cards--branches">
-          <article class="branch-card" data-reveal><h4 data-edit="visit.b1Title">Flatbush</h4><p class="muted" data-edit="visit.b1Body">Discover the roots of Trinidad &amp; Tobago's culture in the heart of Brooklyn.</p></article>
-          <article class="branch-card" data-reveal><h4 data-edit="visit.b2Title">Crown Heights</h4><p class="muted" data-edit="visit.b2Body">Celebrate the community that helped carry soca beyond the Caribbean.</p></article>
-          <article class="branch-card" data-reveal><h4 data-edit="visit.b3Title">Clarendon</h4><p class="muted" data-edit="visit.b3Body">Explore music, storytelling and the people behind the movement.</p></article>
-          <article class="branch-card" data-reveal><h4 data-edit="visit.b4Title">Rugby</h4><p class="muted" data-edit="visit.b4Body">Experience the rhythms, history and spirit of Carnival close to home.</p></article>
-          <article class="branch-card" data-reveal><h4 data-edit="visit.b5Title">Brower Park</h4><p class="muted" data-edit="visit.b5Body">[placeholder]</p></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ PROGRAMS ============ -->
-    <section class="section section--light programs" id="programs">
-      <div class="container">
-        <header class="section-header" data-reveal>
-          <p class="eyebrow" data-edit="programs.eyebrow">Programs &amp; Events</p>
-          <h2 class="section-header__title"><span data-edit="programs.titleLead">More Than </span><span class="accent" data-edit="programs.titleAccent">An Exhibit</span></h2>
-          <span class="rule rule--red"></span>
-          <p class="section-header__lede body-lg" data-reveal data-edit="programs.lede">[placeholder: a borough-wide cultural and educational program]</p>
-        </header>
-
-        <div class="cards cards--3">
-          <article class="program-card" data-reveal><span class="program-card__bar"></span><h4 data-edit="programs.p1Title">Author Talks &amp; Conversations</h4><p class="muted" data-edit="programs.p1Body">[placeholder]</p></article>
-          <article class="program-card" data-reveal><span class="program-card__bar"></span><h4 data-edit="programs.p2Title">Documentary &amp; Film Screenings</h4><p class="muted" data-edit="programs.p2Body">[placeholder]</p></article>
-          <article class="program-card" data-reveal><span class="program-card__bar"></span><h4 data-edit="programs.p3Title">Vinyl Listening Station</h4><p class="muted" data-edit="programs.p3Body">[placeholder]</p></article>
-          <article class="program-card" data-reveal><span class="program-card__bar"></span><h4 data-edit="programs.p4Title">Soca-Fit &amp; Dance</h4><p class="muted" data-edit="programs.p4Body">[placeholder]</p></article>
-          <article class="program-card" data-reveal><span class="program-card__bar"></span><h4 data-edit="programs.p5Title">Youth &amp; Family Workshops</h4><p class="muted" data-edit="programs.p5Body">[placeholder]</p></article>
-          <article class="program-card" data-reveal><span class="program-card__bar"></span><h4 data-edit="programs.p6Title">Plaza Activations</h4><p class="muted" data-edit="programs.p6Body">[placeholder]</p></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ WHY VISIT / VOICES ============ -->
-    <section class="section voices" id="voices">
-      <div class="container">
-        <header class="section-header" data-reveal>
-          <p class="eyebrow" data-edit="voices.eyebrow">Why Visit</p>
-          <h2 class="section-header__title"><span data-edit="voices.titleLead">What You'll </span><span class="accent" data-edit="voices.titleAccent">Look Forward To</span></h2>
-          <span class="rule rule--red"></span>
-        </header>
-
-        <div class="cards cards--4">
-          <article class="branch-card" data-reveal><h4 data-edit="voices.r1Title">See the archive</h4><p class="muted" data-edit="voices.r1Body">A 40-year collection, shown in Brooklyn for the first time.</p></article>
-          <article class="branch-card" data-reveal><h4 data-edit="voices.r2Title">Hear it on vinyl</h4><p class="muted" data-edit="voices.r2Body">Spin “Encore” at the dedicated listening station.</p></article>
-          <article class="branch-card" data-reveal><h4 data-edit="voices.r3Title">Kids' workshops</h4><p class="muted" data-edit="voices.r3Body">Steelpan and Mas across the Little Caribbean branches.</p></article>
-          <article class="branch-card" data-reveal><h4 data-edit="voices.r4Title">A block party</h4><p class="muted" data-edit="voices.r4Body">Community activations where Brooklyn lives the culture.</p></article>
-        </div>
-
-        <h3 class="subhead" data-reveal data-edit="voices.quotesSubhead">Voices</h3>
-        <div class="cards cards--3">
-          <figure class="quote-card" data-reveal>
-            <blockquote data-edit="voices.q1">[placeholder: a fan or community member on what Machel and soca mean to them]</blockquote>
-            <figcaption><span class="quote-card__name" data-edit="voices.q1Name">Full Name</span><span class="quote-card__role muted" data-edit="voices.q1Role">Brooklyn, NY</span></figcaption>
-          </figure>
-          <figure class="quote-card" data-reveal>
-            <blockquote data-edit="voices.q2">[placeholder: a voice from the Little Caribbean community]</blockquote>
-            <figcaption><span class="quote-card__name" data-edit="voices.q2Name">Full Name</span><span class="quote-card__role muted" data-edit="voices.q2Role">Flatbush, Brooklyn</span></figcaption>
-          </figure>
-          <figure class="quote-card" data-reveal>
-            <blockquote data-edit="voices.q3">[placeholder: a fan on travelling to see the exhibition]</blockquote>
-            <figcaption><span class="quote-card__name" data-edit="voices.q3Name">Full Name</span><span class="quote-card__role muted" data-edit="voices.q3Role">Trinidad and Tobago</span></figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ TAKEAWAYS ============ -->
-    <section class="section section--light takeaways" id="takeaways">
-      <div class="container">
-        <header class="section-header section-header--center" data-reveal>
-          <p class="eyebrow" data-edit="take.eyebrow">Takeaways</p>
-          <h2 class="section-header__title"><span data-edit="take.titleLead">What You'll </span><span class="accent" data-edit="take.titleAccent">Carry Home</span></h2>
-          <span class="rule rule--red"></span>
-        </header>
-        <div class="cards cards--3">
-          <article class="takeaway" data-reveal><h4 data-edit="take.t1Head">History, preserved</h4><p data-edit="take.t1Body">Documenting heritage so it endures for the next generation.</p></article>
-          <article class="takeaway" data-reveal><h4 data-edit="take.t2Head">Caribbean identity, in Brooklyn</h4><p data-edit="take.t2Body">A story of community, culture, and creative roots.</p></article>
-          <article class="takeaway" data-reveal><h4 data-edit="take.t3Head">The next generation</h4><p data-edit="take.t3Body">Engaged through learning, music, and storytelling.</p></article>
-        </div>
-      </div>
-    </section>
+    <!-- ============ FOOTER ============ -->
+    <footer class="foot">
+      <p class="foot__partners" data-edit="landing.partners">Machel Montano Foundation for Greatness · Brooklyn Public Library</p>
+      <nav class="foot__social" aria-label="Machel Montano on social media">
+        <a href="https://www.instagram.com/machelmontano" target="_blank" rel="noopener">Instagram</a>
+        <a href="http://tiktok.com/@machelmontano" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://www.facebook.com/MachelMontanoMonk/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://x.com/machelmontano" target="_blank" rel="noopener">X</a>
+        <a href="https://www.youtube.com/machelmontanomusic" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://machelmontano.com/" target="_blank" rel="noopener">machelmontano.com</a>
+      </nav>
+      <p class="foot__fine" data-edit="landing.fine">© 2026 Machel Montano Foundation for Greatness</p>
+    </footer>
 
   </main>
 
-  <!-- ============ FOOTER ============ -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <svg class="crown crown--sm" viewBox="0 0 64 40" aria-hidden="true">
-          <path d="M3 37 V15 L17 25 L25 8 L32 19 L39 8 L47 25 L61 15 V37 Z" />
-          <rect x="3" y="33" width="58" height="4" />
-        </svg>
-        <p class="footer__wordmark"><span class="accent" data-edit="footer.wordmark">MACHEL MONTANO</span><span data-edit="footer.wordmarkTail"> · The Journey of a Soca King</span></p>
-        <p class="footer__tag muted" data-edit="footer.tag">[placeholder: short exhibition tagline]</p>
-      </div>
-
-      <div class="footer__col">
-        <span class="eyebrow" data-edit="footer.col1Head">Visit</span>
-        <a href="#visit" data-edit="footer.col1Link1">Plan Your Visit</a>
-        <a href="#exhibition" data-edit="footer.col1Link2">The Exhibition</a>
-        <a href="#programs" data-edit="footer.col1Link3">Programs &amp; Events</a>
-      </div>
-      <div class="footer__col">
-        <span class="eyebrow" data-edit="footer.col2Head">Partners</span>
-        <p class="muted" data-edit="footer.col2Line1">Machel Montano Foundation for Greatness</p>
-        <p class="muted" data-edit="footer.col2Line2">Brooklyn Public Library</p>
-      </div>
-      <div class="footer__col">
-        <span class="eyebrow" data-edit="footer.col3Head">Contact</span>
-        <p class="muted" data-edit="footer.col3Line1">[placeholder]</p>
-      </div>
-    </div>
-    <div class="container footer__base">
-      <span class="muted" data-edit="footer.copyright">© 2026 [placeholder]</span>
-      <span class="muted" data-edit="footer.baseRight">Aug 21 – Sep 11, 2026 · Brooklyn, NYC</span>
-    </div>
-  </footer>
-
   <script src="js/content.js?v=2"></script>
   <script src="js/edit.js?v=2"></script>
-  <script src="js/main.js?v=2"></script>
+  <script src="js/landing.js?v=1"></script>
 </body>
 </html>
