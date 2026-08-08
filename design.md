@@ -1,7 +1,16 @@
 # Machel Montano — "King of Soca" × Brooklyn Public Library
 ## Website Design Specification (design.md)
 
-> ## ⚠️ ACTIVE DIRECTION (2026-07-27): "Like Ah Boss" movie-brand landing page
+> ## ⚠️ ACTIVE DIRECTION (2026-08-08): OFFICIAL BPL EXHIBITION BRANDING
+> Source of truth: **“14383 EX Machel Montano Exhibition” Round 7 deck** (BPL design dept — designer Maxwell Tielman; internal credits stay off the site). It supersedes both earlier directions below.
+>
+> - **Palette:** red **`#ED2224`** (official poster red; `--red`), black, white ONLY. `#EE4A3F` remains the a11y token for small red text on black. The deck's blue `#3B5DAA`, magenta `#EC008C` and yellow are internal template/annotation chrome — never on the site. Buttons/bands use **black text on red** (AA ~5.2:1).
+> - **Type:** live text is Proxima Nova in print → **Montserrat** on the web (`--font-ui`). The chunky wood-type title faces exist only as **artwork**: `images/lockup-mm.png` + `images/lockup-joask.png` (extracted at 300dpi from the deck's lockup page — always black art on red or white). `Gobold High` only for condensed date numerals; `DK Momotaro` only for the brush line “The Exhibition” (white on red).
+> - **System:** modular block grid (“checkerboard”) of red/black/white cells butted with thin black gridlines; strict **B&W archival photography** hard-cropped into cells (`images/photo-lilman.jpg`); crown cell = white crown on black; date block “AUG 21 to SEP 12” as stacked condensed numerals on red; tagline “Celebrating 5 decades of soca music & history” red on white.
+> - **Official run dates: Aug 21 – Sep 12, 2026.** Credits: “Presented by Brooklyn Public Library and created by the Machel Montano Foundation for Greatness. This exhibition is generously supported by Tourism Trinidad Limited, Unit Trust Corporation and Tatil.”
+> - Implemented in `index.html` + `css/landing.css` (the hero is a faithful CSS-grid build of the official digital poster).
+
+> ## ~~Superseded (2026-07-27): "Like Ah Boss" movie-brand landing page~~
 > The live site (`index.html`) is now a **coming-soon landing page** styled after the client's *Like Ah Boss: Journey of a Soca King* movie poster and flyer system (source: CK Management PSDs + supplied fonts). The full multi-section site is preserved at `full-site.html` and still follows the system documented below.
 >
 > **Landing-page brand tokens (`css/landing.css`):**
