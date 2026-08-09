@@ -34,10 +34,7 @@
   <link rel="icon" type="image/png" href="images/favicon.png?v=2" />
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png?v=2" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/landing.css?v=6" />
+  <link rel="stylesheet" href="css/landing.css?v=5" />
 
   <script type="application/ld+json">
   {
@@ -68,29 +65,35 @@
   </script>
 </head>
 <body>
+  <div class="frame" aria-hidden="true"></div>
+
   <main class="page">
 
-    <!-- ============ HERO: official exhibition poster (BPL brand system) ============ -->
+    <!-- ============ HERO ============ -->
     <header class="hero">
-      <h1 class="sr-only">Machel Montano: Journey of a Soca King. The Exhibition at Brooklyn Public Library, August 21 to September 12, 2026.</h1>
-      <div class="poster">
-        <div class="poster__mm"><img src="images/lockup-mm.png" alt="Machel Montano" width="646" height="240" /></div>
-        <div class="poster__joask"><img src="images/lockup-joask.png" alt="Journey of a Soca King" width="1426" height="480" /></div>
-        <div class="poster__photo"><img src="images/photo-lilman.jpg" alt="A young Machel Montano in a white suit performing with a microphone" width="770" height="1180" /></div>
-        <div class="poster__crown"><img src="images/mm-crown-white.png" alt="" width="400" height="207" /></div>
-        <div class="poster__exh" data-edit="landing.posterExh">The Exhibition</div>
-        <div class="poster__dates">
-          <span class="poster__date"><span class="poster__mon" data-edit="landing.posterM1">Aug</span><span class="poster__num" data-edit="landing.posterN1">21</span></span>
-          <span class="poster__to" data-edit="landing.posterTo">to</span>
-          <span class="poster__date"><span class="poster__mon" data-edit="landing.posterM2">Sep</span><span class="poster__num" data-edit="landing.posterN2">12</span></span>
-        </div>
-        <div class="poster__tag" data-edit="landing.posterTag">Celebrating 5 decades of soca music &amp; history</div>
+      <p class="lockup" aria-label="Machel Montano">
+        <span data-edit="landing.lockupL">Machel</span>
+        <img class="crown" src="images/mm-crown-red.png" alt="" width="400" height="207" />
+        <span data-edit="landing.lockupR">Montano</span>
+      </p>
+
+      <div class="patch" role="presentation">
+        <h1 class="title" data-edit="landing.title">Journey of<br>a Soca King</h1>
       </div>
+      <p class="subtitle" data-edit="landing.subtitle">The Machel Montano Collection</p>
 
       <p class="coming" data-edit="landing.coming">Coming Soon</p>
       <p class="meta" data-edit="landing.meta">Brooklyn Public Library · Central Library, Grand Army Plaza</p>
       <p class="meta meta--dates" data-edit="landing.dates">Aug 21 – Sep 12, 2026 · Free and open to the public</p>
     </header>
+
+    <!-- ============ KEY GRAPHIC ============ -->
+    <figure class="keyart">
+      <div class="keyart__frame">
+        <img src="images/poster-official.jpg" alt="Official exhibition poster: Machel Montano, Journey of a Soca King, The Exhibition, August 21 to September 12, celebrating 5 decades of soca music and history" width="1080" height="1350" />
+      </div>
+      <figcaption class="keyart__caption" data-edit="landing.keyartCaption">The official exhibition poster</figcaption>
+    </figure>
 
     <!-- ============ STATEMENT ============ -->
     <section class="statement">
@@ -154,8 +157,7 @@
 
     <!-- ============ FOOTER ============ -->
     <footer class="foot">
-      <p class="foot__partners" data-edit="landing.partners">Presented by Brooklyn Public Library and created by the Machel Montano Foundation for Greatness</p>
-      <p class="foot__partners foot__partners--sub" data-edit="landing.partners2">This exhibition is generously supported by Tourism Trinidad Limited, Unit Trust Corporation and Tatil</p>
+      <p class="foot__partners" data-edit="landing.partners">Presented by Brooklyn Public Library · Created by the Machel Montano Foundation for Greatness · Supported by Tourism Trinidad Limited, Unit Trust Corporation and Tatil</p>
       <nav class="foot__social" aria-label="Machel Montano on social media">
         <a href="https://www.instagram.com/machelmontano" target="_blank" rel="noopener">Instagram</a>
         <a href="http://tiktok.com/@machelmontano" target="_blank" rel="noopener">TikTok</a>
