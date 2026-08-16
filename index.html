@@ -28,7 +28,7 @@
 
   <link rel="icon" type="image/png" href="images/favicon.png?v=2" />
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png?v=2" />
-  <link rel="stylesheet" href="css/site.css?v=1" />
+  <link rel="stylesheet" href="css/site.css?v=2" />
 
   <script type="application/ld+json">
   {
@@ -113,13 +113,37 @@
         <section class="block" id="signup">
           <h2 class="block__title" data-edit="home.signupTitle">Stay in the loop</h2>
           <p class="block__body" data-edit="home.signupBody">Join the mailing list for programme updates and announcements.</p>
-          <!-- Mailchimp: replace MC_ACTION_URL with the embedded-form action URL
-               (Audience → Signup forms → Embedded forms). -->
-          <form class="signup" method="post" action="MC_ACTION_URL" target="_blank" novalidate>
-            <label class="sr-only" for="mce-EMAIL">Email address</label>
-            <input id="mce-EMAIL" name="EMAIL" type="email" required placeholder="Your email address" autocomplete="email" />
-            <div class="signup__hp" aria-hidden="true"><input type="text" name="b_placeholder" tabindex="-1" value="" /></div>
-            <button type="submit" data-edit="home.signupBtn">Sign Up</button>
+          <!-- Mailchimp embedded form (monkmusic audience). Styled to the site;
+               field names must match the Mailchimp merge tags exactly. -->
+          <form class="signup" method="post" target="_blank"
+                action="https://monkmusic.us17.list-manage.com/subscribe/post?u=14c743b682dd7126bc7abe0f4&amp;id=ce4c840046&amp;f_id=00798be2f0">
+            <div class="signup__row">
+              <div class="signup__f">
+                <label for="mce-FNAME">First name <span aria-hidden="true">*</span></label>
+                <input id="mce-FNAME" name="FNAME" type="text" required autocomplete="given-name" />
+              </div>
+              <div class="signup__f">
+                <label for="mce-LNAME">Last name <span aria-hidden="true">*</span></label>
+                <input id="mce-LNAME" name="LNAME" type="text" required autocomplete="family-name" />
+              </div>
+            </div>
+            <div class="signup__f">
+              <label for="mce-EMAIL">Email address <span aria-hidden="true">*</span></label>
+              <input id="mce-EMAIL" name="EMAIL" type="email" required autocomplete="email" />
+            </div>
+            <div class="signup__row">
+              <div class="signup__f">
+                <label for="mce-MMERGE5">City <span aria-hidden="true">*</span></label>
+                <input id="mce-MMERGE5" name="MMERGE5" type="text" required autocomplete="address-level2" />
+              </div>
+              <div class="signup__f">
+                <label for="mce-MMERGE8">Country <span aria-hidden="true">*</span></label>
+                <input id="mce-MMERGE8" name="MMERGE8" type="text" required autocomplete="country-name" />
+              </div>
+            </div>
+            <div hidden><input type="hidden" name="tags" value="8337840" /></div>
+            <div class="signup__hp" aria-hidden="true"><input type="text" name="b_14c743b682dd7126bc7abe0f4_ce4c840046" tabindex="-1" value="" /></div>
+            <button type="submit" name="subscribe" data-edit="home.signupBtn">Subscribe</button>
           </form>
           <p class="signup__msg" role="status" hidden></p>
         </section>
