@@ -3,61 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- PRE-LAUNCH: site is password-gated; keep search engines out until launch (remove with the gate) -->
+  <!-- PRE-LAUNCH: password-gated; keep search engines out until launch (remove with the gate) -->
   <meta name="robots" content="noindex" />
-  <!-- password gate: lock before first paint unless this browser has been unlocked -->
   <script>try{if(localStorage.getItem('kos-unlock')!=='1')document.documentElement.classList.add('kos-locked');}catch(e){document.documentElement.classList.add('kos-locked');}</script>
-  <script src="js/gate.js?v=3" defer></script>
+  <script src="js/gate.js?v=4" defer></script>
 
-  <title>Journey of a Soca King: The Machel Montano Collection | Coming Soon</title>
-  <meta name="description" content="Coming soon: Journey of a Soca King, the first-ever exhibition of the Machel Montano collection. Brooklyn Public Library, Aug 21 – Sep 12, 2026." />
+  <title>Journey of a Soca King: The Exhibition | Brooklyn Public Library</title>
+  <meta name="description" content="Journey of a Soca King: The Exhibition. Objects from Machel Montano's five decades in soca, at Brooklyn Public Library. 22 August to 12 September 2026. Free admission." />
   <meta name="theme-color" content="#000000" />
-
   <link rel="canonical" href="https://kwamenasworld-cloud.github.io/king-of-soca/" />
 
-  <!-- Open Graph / social share -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Brooklyn Public Library" />
-  <meta property="og:title" content="Journey of a Soca King: The Machel Montano Collection" />
-  <meta property="og:description" content="Coming soon: the first-ever exhibition of the Machel Montano collection. Brooklyn Public Library, Aug 21 – Sep 12, 2026." />
+  <meta property="og:title" content="Journey of a Soca King: The Exhibition" />
+  <meta property="og:description" content="Objects from Machel Montano's five decades in soca, at Brooklyn Public Library. 22 August to 12 September 2026. Free admission." />
   <meta property="og:url" content="https://kwamenasworld-cloud.github.io/king-of-soca/" />
   <meta property="og:image" content="https://kwamenasworld-cloud.github.io/king-of-soca/images/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Journey of a Soca King: The Machel Montano Collection. Brooklyn Public Library Exhibition." />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Journey of a Soca King: The Machel Montano Collection" />
-  <meta name="twitter:description" content="Coming soon: the first-ever exhibition of the Machel Montano collection. Brooklyn Public Library, Aug 21 – Sep 12, 2026." />
+  <meta name="twitter:title" content="Journey of a Soca King: The Exhibition" />
+  <meta name="twitter:description" content="Objects from Machel Montano's five decades in soca, at Brooklyn Public Library. 22 August to 12 September 2026. Free admission." />
   <meta name="twitter:image" content="https://kwamenasworld-cloud.github.io/king-of-soca/images/og-image.png" />
 
-  <!-- Icons -->
   <link rel="icon" type="image/png" href="images/favicon.png?v=2" />
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png?v=2" />
-
-  <link rel="stylesheet" href="css/landing.css?v=5" />
+  <link rel="stylesheet" href="css/site.css?v=1" />
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ExhibitionEvent",
-    "name": "Journey of a Soca King: The Machel Montano Collection",
-    "startDate": "2026-08-21",
+    "name": "Journey of a Soca King: The Exhibition",
+    "startDate": "2026-08-22",
     "endDate": "2026-09-12",
     "eventStatus": "https://schema.org/EventScheduled",
     "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-    "description": "The first-ever exhibition of the Machel Montano collection: forty years of soca, from Trinidad and Tobago to Brooklyn to the world.",
+    "isAccessibleForFree": true,
+    "description": "Objects from Machel Montano's five decades in soca, including performance costumes, trophies and vinyl records, at Brooklyn Public Library.",
     "image": "https://kwamenasworld-cloud.github.io/king-of-soca/images/og-image.png",
     "location": {
       "@type": "Place",
       "name": "Brooklyn Public Library, Central Library",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "10 Grand Army Plaza",
-        "addressLocality": "Brooklyn",
-        "addressRegion": "NY",
-        "postalCode": "11238",
-        "addressCountry": "US"
-      }
+      "address": { "@type": "PostalAddress", "streetAddress": "10 Grand Army Plaza", "addressLocality": "Brooklyn", "addressRegion": "NY", "postalCode": "11238", "addressCountry": "US" }
     },
     "organizer": { "@type": "Organization", "name": "Brooklyn Public Library", "url": "https://www.bklynlibrary.org/" },
     "performer": { "@type": "Person", "name": "Machel Montano" }
@@ -67,97 +55,80 @@
 <body>
   <div class="frame" aria-hidden="true"></div>
 
-  <main class="page">
+  <div class="page">
 
-    <!-- ============ HERO ============ -->
-    <header class="hero">
-      <p class="lockup" aria-label="Machel Montano">
-        <span data-edit="landing.lockupL">Machel</span>
+    <header class="masthead">
+      <a class="lockup" href="index.html" aria-label="Machel Montano, home">
+        <span>Machel</span>
         <img class="crown" src="images/mm-crown-red.png" alt="" width="400" height="207" />
-        <span data-edit="landing.lockupR">Montano</span>
-      </p>
-
-      <div class="patch" role="presentation">
-        <h1 class="title" data-edit="landing.title">Journey of<br>a Soca King</h1>
-      </div>
-      <p class="subtitle" data-edit="landing.subtitle">The Machel Montano Collection</p>
-
-      <p class="coming" data-edit="landing.coming">Coming Soon</p>
-      <p class="meta" data-edit="landing.meta">Brooklyn Public Library · Central Library, Grand Army Plaza</p>
-      <p class="meta meta--dates" data-edit="landing.dates">Aug 21 – Sep 12, 2026 · Free and open to the public</p>
+        <span>Montano</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="programming.html">Programming</a>
+        <a href="inside.html">Inside the Exhibition</a>
+        <a href="visit.html">Visit</a>
+        <a href="about.html">About</a>
+      </nav>
     </header>
 
-    <!-- ============ KEY GRAPHIC ============ -->
-    <figure class="keyart">
-      <div class="keyart__frame">
-        <img src="images/poster-official.jpg" alt="Official exhibition poster: Machel Montano, Journey of a Soca King, The Exhibition, August 21 to September 12, celebrating 5 decades of soca music and history" width="1080" height="1350" />
+    <main>
+      <div class="phead">
+        <div class="patch"><h1 data-edit="home.title">Journey of<br>a Soca King</h1></div>
+        <p class="phead__sub" data-edit="home.sub">The Exhibition</p>
+        <p class="phead__meta" data-edit="home.where">Brooklyn Public Library · Central Library at Grand Army Plaza, and five Little Caribbean branches: Brower Park, Clarendon, Crown Heights, Rugby and Flatbush.</p>
+        <p class="phead__meta" data-edit="home.when"><strong>22 August to 12 September 2026 · Free admission</strong></p>
       </div>
-      <figcaption class="keyart__caption" data-edit="landing.keyartCaption">The official exhibition poster</figcaption>
-    </figure>
 
-    <!-- ============ STATEMENT ============ -->
-    <section class="statement">
-      <h2 class="statement__lead" data-edit="landing.statementLead">The first-ever exhibition of the Machel Montano collection.</h2>
-      <p class="statement__body" data-edit="landing.statementBody">Forty years of soca, shown for the very first time. Photographs, costumes, awards and memories, carefully preserved across four decades, tell the journey of the King of Soca: born in Trinidad and Tobago, carried through Brooklyn, and shared with the world. Presented in partnership with the Brooklyn Public Library at Central Library and across the Little Caribbean branches.</p>
-    </section>
+      <figure class="keyart">
+        <img src="images/poster-official.jpg" alt="Exhibition poster: Machel Montano, Journey of a Soca King, The Exhibition, celebrating five decades of soca music and history" width="1080" height="1350" />
+        <figcaption class="keyart__caption" data-edit="home.keyartCaption">The official exhibition poster</figcaption>
+      </figure>
 
-    <!-- ============ HIGHLIGHTS ============ -->
-    <section class="block">
-      <h2 class="block__title" data-edit="landing.hlTitle">Inside the Exhibition</h2>
-      <ul class="highlights">
-        <li data-edit="landing.hl1"><strong>The Archive.</strong> Four decades of photographs, costumes and awards, first time on display.</li>
-        <li data-edit="landing.hl2"><strong>Encore Vinyl Station.</strong> A dedicated listening station for the new album.</li>
-        <li data-edit="landing.hl3"><strong>The Lyric Book.</strong> A five-volume, hand-bound book of Machel's lyrics, 1982–2026.</li>
-        <li data-edit="landing.hl4"><strong>In Print.</strong> A wall of local newspapers and foreign magazines from before social media.</li>
-        <li data-edit="landing.hl5"><strong>Interactive Media.</strong> Live performances and rare footage on screens throughout.</li>
-        <li data-edit="landing.hl6"><strong>Little Caribbean.</strong> Free family programming across Flatbush, Crown Heights, Clarendon, Rugby and Brower Park.</li>
-      </ul>
-    </section>
+      <div class="wrap">
+        <div class="prose">
+          <p class="lead" data-edit="home.p1">Machel Montano, the Trinidad and Tobago-born singer, songwriter, producer, and cultural icon widely known as the King of Soca, has spent five decades shaping the sound and global reach of Caribbean music. Performing since the age of seven, Montano has built a groundbreaking career through music, international performances, entrepreneurship, and cultural advocacy.</p>
+          <p data-edit="home.p2">A record 12-time Trinidad and Tobago Road March champion, Montano is also a National Calypso Monarch, Chutney Soca Monarch, and recipient of the Hummingbird Gold National Medal. His career reflects the energy, creativity, and cultural traditions of Trinidad and Tobago while demonstrating the power of Soca to connect audiences across borders.</p>
+          <p data-edit="home.p3">Journey of a Soca King: The Exhibition brings together objects from Montano's remarkable career, including performance costumes, trophies, and vinyl records. Visitors can listen to a selection of Montano's music at a vinyl listening station and watch highlights from key moments in his life and career.</p>
+          <p data-edit="home.p4">The exhibition follows the release of the 2026 documentary <em>Like Ah Boss: Journey of a Soca King</em>, which centers on Montano's 16 performances during the 2015 Carnival season.</p>
+          <p data-edit="home.p5">Brooklyn holds a special place in this story. Home to one of the largest Caribbean diasporas outside the Caribbean itself, Brooklyn has long been a vital center for Caribbean music, culture, and community. For Montano, the borough was an important part of his early career and his connection to audiences beyond Trinidad and Tobago.</p>
+          <p data-edit="home.p6">Journey of a Soca King celebrates these connections between Trinidad and Tobago, Brooklyn, and the wider Caribbean diaspora, and the enduring cultural impact of one of Soca's most influential artists.</p>
+        </div>
 
-    <!-- ============ PROGRAMMING DATES ============ -->
-    <section class="block">
-      <h2 class="block__title" data-edit="landing.progTitle">Programming</h2>
-      <p class="block__note" data-edit="landing.progNote">Preliminary. Dates and programming subject to change.</p>
-      <p class="schedule-legend" data-edit="landing.progLegend">★ = Machel Montano appearing in person</p>
-      <ul class="schedule">
-        <li><span class="schedule__date" data-edit="landing.ev1Date">★ Aug 21</span><span class="schedule__what" data-edit="landing.ev1What">Private opening, Central Library</span></li>
-        <li><span class="schedule__date" data-edit="landing.ev2Date">Aug 21 – Sep 12</span><span class="schedule__what" data-edit="landing.ev2What">Exhibition open to the public, free. Central Library + five Little Caribbean branches</span></li>
-        <li><span class="schedule__date" data-edit="landing.ev3Date">★ Aug 22</span><span class="schedule__what" data-edit="landing.ev3What">Reading at a Little Caribbean branch</span></li>
-        <li><span class="schedule__date" data-edit="landing.ev4Date">Aug 27</span><span class="schedule__what" data-edit="landing.ev4What">In conversation: an analysis of the lyrics, with Dr. Rudolph Ottley. Dweck Center</span></li>
-        <li><span class="schedule__date" data-edit="landing.ev5Date">Sep 2</span><span class="schedule__what" data-edit="landing.ev5What">In conversation: Machel's collaborations with artists across genres, with Dr. Rudolph Ottley. Dweck Center</span></li>
-        <li><span class="schedule__date" data-edit="landing.ev6Date">★ Sep 2</span><span class="schedule__what" data-edit="landing.ev6What">Reading at a Little Caribbean branch</span></li>
-        <li><span class="schedule__date" data-edit="landing.ev7Date">★ Sep 3</span><span class="schedule__what" data-edit="landing.ev7What">Documentary screening: “Like Ah Boss,” 8:45pm. Outdoor plaza with DJ (rain date Sep 4)</span></li>
-        <li><span class="schedule__date" data-edit="landing.ev8Date">★ Sep 9</span><span class="schedule__what" data-edit="landing.ev8What">Closing ceremony</span></li>
-      </ul>
-    </section>
+        <nav class="seclinks" aria-label="Sections">
+          <a class="seclink" href="programming.html">
+            <span class="seclink__t" data-edit="home.link1t">What is on</span>
+            <span class="seclink__d" data-edit="home.link1d">The full programme of events at the Central Library and across the branches.</span>
+          </a>
+          <a class="seclink" href="inside.html">
+            <span class="seclink__t" data-edit="home.link2t">Inside the exhibition</span>
+            <span class="seclink__d" data-edit="home.link2d">What is on display, section by section.</span>
+          </a>
+          <a class="seclink" href="visit.html">
+            <span class="seclink__t" data-edit="home.link3t">Visit</span>
+            <span class="seclink__d" data-edit="home.link3d">Addresses, hours and how to get there.</span>
+          </a>
+        </nav>
 
-    <!-- ============ MACHEL SPEAKING / RSVP ============ -->
-    <section class="block">
-      <h2 class="block__title" data-edit="landing.liveTitle">Machel Live</h2>
-      <p class="block__body" data-edit="landing.liveBody">★ marks Machel's appearances in the programme above. RSVP and ticket links will live here when doors open.</p>
-      <p class="tba" data-edit="landing.liveTba">RSVP &amp; ticket links coming soon</p>
-    </section>
+        <section class="block" id="signup">
+          <h2 class="block__title" data-edit="home.signupTitle">Stay in the loop</h2>
+          <p class="block__body" data-edit="home.signupBody">Join the mailing list for programme updates and announcements.</p>
+          <!-- Mailchimp: replace MC_ACTION_URL with the embedded-form action URL
+               (Audience → Signup forms → Embedded forms). -->
+          <form class="signup" method="post" action="MC_ACTION_URL" target="_blank" novalidate>
+            <label class="sr-only" for="mce-EMAIL">Email address</label>
+            <input id="mce-EMAIL" name="EMAIL" type="email" required placeholder="Your email address" autocomplete="email" />
+            <div class="signup__hp" aria-hidden="true"><input type="text" name="b_placeholder" tabindex="-1" value="" /></div>
+            <button type="submit" data-edit="home.signupBtn">Sign Up</button>
+          </form>
+          <p class="signup__msg" role="status" hidden></p>
+        </section>
+      </div>
+    </main>
 
-    <!-- ============ MAILING LIST ============ -->
-    <section class="block block--signup" id="signup">
-      <h2 class="block__title" data-edit="landing.signupTitle">Be the first to know</h2>
-      <p class="block__body" data-edit="landing.signupBody">Join the mailing list for opening dates, programming and appearances.</p>
-
-      <!-- Mailchimp embed: replace MC_ACTION_URL with the form action from Mailchimp
-           (Audience -> Signup forms -> Embedded forms), e.g.
-           https://XXXX.usX.list-manage.com/subscribe/post?u=...&id=... -->
-      <form class="signup" method="post" action="MC_ACTION_URL" target="_blank" novalidate>
-        <label class="sr-only" for="mce-EMAIL">Email address</label>
-        <input id="mce-EMAIL" name="EMAIL" type="email" required placeholder="Your email address" autocomplete="email" />
-        <div class="signup__hp" aria-hidden="true"><input type="text" name="b_placeholder" tabindex="-1" value="" /></div>
-        <button type="submit" data-edit="landing.signupBtn">Sign Up</button>
-      </form>
-      <p class="signup__msg" role="status" hidden></p>
-    </section>
-
-    <!-- ============ FOOTER ============ -->
     <footer class="foot">
-      <p class="foot__partners" data-edit="landing.partners">Presented by Brooklyn Public Library · Created by the Machel Montano Foundation for Greatness · Supported by Tourism Trinidad Limited, Unit Trust Corporation and Tatil</p>
+      <p class="foot__partners" data-edit="foot.partners">Presented by Brooklyn Public Library and created by the Machel Montano Foundation for Greatness</p>
+      <p class="foot__partners foot__partners--sub" data-edit="foot.partners2">This exhibition is generously supported by Tourism Trinidad Limited, Unit Trust Corporation and Tatil</p>
       <nav class="foot__social" aria-label="Machel Montano on social media">
         <a href="https://www.instagram.com/machelmontano" target="_blank" rel="noopener">Instagram</a>
         <a href="http://tiktok.com/@machelmontano" target="_blank" rel="noopener">TikTok</a>
@@ -166,13 +137,13 @@
         <a href="https://www.youtube.com/machelmontanomusic" target="_blank" rel="noopener">YouTube</a>
         <a href="https://machelmontano.com/" target="_blank" rel="noopener">machelmontano.com</a>
       </nav>
-      <p class="foot__fine" data-edit="landing.fine">© 2026 Machel Montano Foundation for Greatness</p>
+      <p class="foot__fine" data-edit="foot.fine">© 2026 Machel Montano Foundation for Greatness</p>
     </footer>
 
-  </main>
+  </div>
 
-  <script src="js/content.js?v=2"></script>
-  <script src="js/edit.js?v=2"></script>
-  <script src="js/landing.js?v=1"></script>
+  <script src="js/content.js?v=3"></script>
+  <script src="js/edit.js?v=3"></script>
+  <script src="js/landing.js?v=2"></script>
 </body>
 </html>

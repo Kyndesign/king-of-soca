@@ -1,7 +1,20 @@
 # Machel Montano — "King of Soca" × Brooklyn Public Library
 ## Website Design Specification (design.md)
 
-> ## ⚠️ ACTIVE DIRECTION (2026-08-08): OFFICIAL BPL EXHIBITION BRANDING
+> ## ⚠️ ACTIVE BUILD (2026-08-13): FULL 5-PAGE SITE — see the Build Guide
+> **Source of truth for structure and copy: “Exhibition Website Build Guide”, 13 August 2026** (client PDF). Copy on Home and About is marked “use as written” and must not be paraphrased.
+>
+> - **Pages:** `index.html` (Home) · `programming.html` · `inside.html` (Inside the exhibition) · `visit.html` · `about.html`. Shared stylesheet `css/site.css`; shared masthead + nav + footer on every page; password gate + `noindex` on every page.
+> - **Run dates: 22 August to 12 September 2026 · free admission** (superseded the earlier Aug 21 / Sep 11–12 dates).
+> - **Programming:** 11 events from the Master Schedule, in date order, all free. Foot of Programming and the Visit page link to the Library's own exhibition page: `bklynlibrary.org/exhibitions/machel-montano-journey`.
+> - **Inside the exhibition:** 11 categories in walkthrough order. Installation section letters are notation only and must NOT appear on the site.
+> - **Visit:** every location name links to its own `bklynlibrary.org/locations/...` page — hours change and the Library page is the live source.
+> - **Imagery:** real artefact photography extracted from the client's *Exhibition Overview v5* deck into `images/ex/`.
+> - **Internal only, never on the site:** BPL staff contacts (Jenn Proffitt et al.), asset URLs, and designer/writer credits.
+>
+> Visual language remains the approved landing look (black canvas, distressed frame, torn-paper patches, Gobold + DK Momotaro, one red) — the client confirmed the official BPL branding applies to the **key graphic only**.
+
+> ## ~~Superseded (2026-08-08): OFFICIAL BPL EXHIBITION BRANDING~~
 > Source of truth: **“14383 EX Machel Montano Exhibition” Round 7 deck** (BPL design dept — designer Maxwell Tielman; internal credits stay off the site). It supersedes both earlier directions below.
 >
 > - **Palette:** red **`#ED2224`** (official poster red; `--red`), black, white ONLY. `#EE4A3F` remains the a11y token for small red text on black. The deck's blue `#3B5DAA`, magenta `#EC008C` and yellow are internal template/annotation chrome — never on the site. Buttons/bands use **black text on red** (AA ~5.2:1).
